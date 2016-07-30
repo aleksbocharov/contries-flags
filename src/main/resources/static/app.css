@@ -29,6 +29,15 @@ header h1 a {
     padding: 10px;
 }
 
+.sort_option {
+    display: inline-block;
+    width: 20%;
+    padding: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .country {
     box-sizing: border-box;
     display: inline-block;

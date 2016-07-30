@@ -1,13 +1,15 @@
 package com.cooperdevs.countries.model;
 
+import java.util.List;
+
 public class Country {
     private String name;
     private String flagName;
     private int population;
     private String capital;
-    private String language;
+    private List<String> language;
 
-    public Country(String name, int population, String capital, String language) {
+    public Country(String name, int population, String capital, List<String> language) {
         this.name = name;
         this.flagName = name.toLowerCase();
         this.population = population;
@@ -47,11 +49,11 @@ public class Country {
         this.capital = capital;
     }
 
-    public String getLanguage() {
+    public List<String> getLanguage() {
         return language;
     }
 
-    public void setLanguage(String language) {
+    public void setLanguage(List<String> language) {
         this.language = language;
     }
 }

@@ -27,11 +27,10 @@
             </div>
             <div class="stat">
                 <h4>Official Languages</h4>
-                <span th:text="${country.language}"></span>
-<!--                <ul>
-                    <li>Hindi</li>
-                    <li>English</li>
-                </ul>-->
+                <!--<span th:text="${country.language}"></span>-->
+                <ul th:each="language : ${country.language}">
+                    <li th:text="${language}"></li>
+                </ul>
             </div>
         </div>
         <div class="flag">

@@ -5,6 +5,7 @@ import com.cooperdevs.countries.model.Country;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -20,4 +21,12 @@ public class CountryController {
         modelMap.put("countries", allCountries);
         return "home";
     }
+
+    @RequestMapping("/country/{flagName}")
+    public String viewCountry(@PathVariable String flagName, ModelMap modelMap){
+        Country country = countryRepository.getByName(flagName);
+        modelMap.put("country",country);
+        return "details";
+    }
+
 }
